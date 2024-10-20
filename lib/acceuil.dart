@@ -23,7 +23,7 @@ class Acceuil extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/home');
             },
-            child: Text('start'),
+            child: Text('Get start'),
           )
         ],
       ),

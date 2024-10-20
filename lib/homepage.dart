@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quizproject/acceuil.dart';
+import 'package:quizproject/quizz.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({
@@ -11,14 +13,6 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('My quizz'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.tiktok),
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -27,7 +21,7 @@ class Homepage extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               Text(
-                ' What is your favorite color ',
+                'What is your favorite color?',
                 style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
@@ -38,21 +32,18 @@ class Homepage extends StatelessWidget {
                 onPressed: () {
                   print('Bouton rose cliqué');
                 },
-                style: ElevatedButton.styleFrom(),
                 child: Text('Button pink'),
               ),
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Vert cliqué');
                 },
-                style: ElevatedButton.styleFrom(),
                 child: Text('Button green'),
               ),
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Bleu cliqué');
                 },
-                style: ElevatedButton.styleFrom(),
                 child: Text('Button blue'),
               ),
             ],
@@ -62,9 +53,42 @@ class Homepage extends StatelessWidget {
       floatingActionButton:
           FloatingActionButton(onPressed: null, child: Icon(Icons.alarm)),
       drawer: Drawer(
-        child: Text(
-          "Menu",
-          style: TextStyle(fontSize: 36),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Accueil'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Acceuil()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.quiz),
+              title: Text('Quizz'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Quizz()),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
