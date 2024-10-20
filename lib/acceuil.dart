@@ -21,7 +21,7 @@ class Acceuil extends StatelessWidget {
           Image.asset('assets/img/quizz.png', width: 500, height: 250),
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/home');
+              Navigator.pushNamed(context, '/quizz');
             },
             child: Text(
               'Get start',

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quizproject/acceuil.dart';
 import 'package:quizproject/quizz.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({
+class Home extends StatelessWidget {
+  const Home({
     super.key,
   });
 
@@ -28,22 +28,21 @@ class Homepage extends StatelessWidget {
                   color: Colors.deepPurple,
                 ),
               ),
-              SizedBox(
-                  height: 20), // Espace entre la question et le premier bouton
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   print('Bouton rose cliqué');
                 },
                 child: Text('Button pink'),
               ),
-              SizedBox(height: 10), // Espace entre les boutons
+              SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Vert cliqué');
                 },
                 child: Text('Button green'),
               ),
-              SizedBox(height: 10), // Espace entre les boutons
+              SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Bleu cliqué');

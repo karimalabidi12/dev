@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizproject/acceuil.dart';
-import 'package:quizproject/homepage.dart';
+import 'package:quizproject/quizz.dart';
 
 void main() {
   runApp(MonApp());
@@ -11,12 +11,11 @@ class MonApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Test App',
-      // home: Homepage(),
       // home: Acceuil(),
       initialRoute: '/acceuil',
       routes: {
         '/acceuil': (context) => Acceuil(),
-        '/home': (context) => Homepage(),
+        '/quizz': (context) => Quizz(),
       },
       debugShowCheckedModeBanner: false,
     );

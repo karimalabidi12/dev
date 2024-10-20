@@ -7,19 +7,18 @@ class Quizz extends StatefulWidget {
 }
 
 class _QuizzState extends State<Quizz> {
-  int score = 0; // Stocke le score
-  int currentQuestion = 0; // Suivi de la question actuelle
+  int score = 0;
+  int currentQuestion = 0;
 
-  // Liste des questions et réponses
   final questions = [
     {
       'question': 'What is the color of the sky?',
       'answers': ['Blue', 'Green', 'Red'],
-      'correctAnswer': 0, // L'index de la réponse correcte
+      'correctAnswer': 0,
     },
     {
-      'question': 'What is 2 + 2?',
-      'answers': ['4', '5', '3'],
+      'question': 'how many month in the year?',
+      'answers': ['12', '5', '10'],
       'correctAnswer': 0,
     },
     {
@@ -29,13 +28,12 @@ class _QuizzState extends State<Quizz> {
     },
   ];
 
-  // Fonction qui vérifie la réponse et met à jour le score
   void answerQuestion(int selectedAnswerIndex) {
     if (selectedAnswerIndex == questions[currentQuestion]['correctAnswer']) {
       score++;
     }
     setState(() {
-      currentQuestion++; // Passer à la question suivante
+      currentQuestion++;
     });
   }
 
@@ -56,7 +54,6 @@ class _QuizzState extends State<Quizz> {
                     style: TextStyle(fontSize: 24),
                   ),
                   SizedBox(height: 20),
-                  // Boucle pour afficher les boutons de réponses
                   ...(questions[currentQuestion]['answers'] as List<String>)
                       .map((answer) {
                     return ElevatedButton(
@@ -76,7 +73,6 @@ class _QuizzState extends State<Quizz> {
                 ),
               ),
       ),
-      // Drawer avec deux liens : Accueil et Quizz
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
