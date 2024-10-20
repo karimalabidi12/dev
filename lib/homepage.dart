@@ -28,18 +28,22 @@ class Homepage extends StatelessWidget {
                   color: Colors.deepPurple,
                 ),
               ),
+              SizedBox(
+                  height: 20), // Espace entre la question et le premier bouton
               ElevatedButton(
                 onPressed: () {
                   print('Bouton rose cliqué');
                 },
                 child: Text('Button pink'),
               ),
+              SizedBox(height: 10), // Espace entre les boutons
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Vert cliqué');
                 },
                 child: Text('Button green'),
               ),
+              SizedBox(height: 10), // Espace entre les boutons
               ElevatedButton(
                 onPressed: () {
                   print('Bouton Bleu cliqué');

@@ -16,14 +16,17 @@ class Acceuil extends StatelessWidget {
             style: TextStyle(
                 fontSize: 42,
                 fontWeight: FontWeight.bold,
-                color: Colors.pink[200]),
+                color: const Color.fromARGB(255, 188, 44, 149)),
           ),
-          Image.asset('assets/img/login.jpg', width: 500, height: 250),
+          Image.asset('assets/img/quizz.png', width: 500, height: 250),
           TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/home');
             },
-            child: Text('Get start'),
+            child: Text(
+              'Get start',
+              style: TextStyle(color: const Color.fromARGB(255, 188, 44, 149)),
+            ),
           )
         ],
       ),
