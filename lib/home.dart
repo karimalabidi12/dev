@@ -6,6 +6,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -16,8 +18,8 @@ class Home extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/quizz.jpg'),
-                fit: BoxFit.cover,
+                image: AssetImage('assets/img/quizz.jpg'),
+                fit: BoxFit.contain,
               ),
             ),
           ),

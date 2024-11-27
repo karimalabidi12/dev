@@ -57,6 +57,45 @@ class HomePageState extends State<Quizz> {
       appBar: AppBar(
         title: Text('Quiz App'),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Home()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.quiz),
+              title: const Text('Quiz'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Quizz()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       body: question_index < questions.length
           ? Padding(
               padding: const EdgeInsets.all(20.0),
