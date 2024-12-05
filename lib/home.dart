@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 15),
-                    backgroundColor: const Color.fromARGB(255, 217, 159, 247),
+                    backgroundColor: const Color.fromARGB(255, 99, 53, 121),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: const Color.fromARGB(255, 99, 53, 121),
               ),
               child: Text(
                 'Menu',
